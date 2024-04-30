@@ -103,6 +103,28 @@ print(x.imag)
 # Here's how to make a complex number, in case you've ever been curious:
 c = 12 + 3j
 print(c.imag)
+x.bit_length
+x.bit_length()
+#List methods
+
+#list.append modifies a list by adding an item to the end:
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+planets.append('Pluto')
+help(planets.append)
+print(planets)
+#list.pop removes and returns the last element of a list:
+planets.pop() 
+print(planets)
+#Searching lists   We can get its index using the list.index method.
+print(planets.index('Earth'))
+#print(planets.index('Pluto'))#ValueError: 'Pluto' is not in list
+
+#To avoid unpleasant surprises like this, 
+#we can use the in operator to determine whether a list contains a particular value:
+
+print("Earth" in planets)
+print("Pluto" in planets)
+print(planets)
 
 
 
