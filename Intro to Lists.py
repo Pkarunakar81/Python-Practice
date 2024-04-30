@@ -46,8 +46,63 @@ print("Total books sold in one week:", sum(hardcover_sales))
 #we take the sum from the first five days
 print("Average books sold in first five days:", sum(hardcover_sales[:5])/5)
 
+#Lists
 
+primes = [2, 3, 5, 7]
+We can even make a list of lists:
+    
+    hands = [
+    ['J', 'Q', 'K'],
+    ['2', '2', '2'],
+    ['6', 'A', 'K'], # (Comma after the last element is optional)
+]
+# (I could also have written this on one line, but it can get hard to read)
+hands = [['J', 'Q', 'K'], ['2', '2', '2'], ['6', 'A', 'K']]
 
+A list can contain a mix of different types of variables:
+    
+my_favourite_things = [32, 'raindrops on roses', help]
+# (Yes, Python's help function is *definitely* one of my favourite things)
+
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+
+#Indexing
+planets[0]
+planets[-1]
+#Slicing
+planets[0:3]
+planets[1:-1]
+#Changing lists
+#Lists are "mutable", meaning they can be modified "in place".
+planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+planets[3] = 'Malacandra'
+planets
+['Mercury',
+ 'Venus',
+ 'Earth',
+ 'Malacandra',
+ 'Jupiter',
+ 'Saturn',
+ 'Uranus',
+ 'Neptune']
+ 
+planets[:3] = ['Mur', 'Vee', 'Ur']
+print(planets)
+# That was silly. Let's give them back their old names
+planets[:4] = ['Mercury', 'Venus', 'Earth', 'Mars',]
+['Mur', 'Vee', 'Ur', 'Malacandra', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+#List functions
+len(planets)
+sorted(planets)#returns a sorted version of a list:
+sum(primes)
+max(primes)
+#Interlude: objects objects carry some things around with them. You access that stuff using Python's dot syntax.
+x = 12
+# x is a real number, so its imaginary part is 0.
+print(x.imag)
+# Here's how to make a complex number, in case you've ever been curious:
+c = 12 + 3j
+print(c.imag)
 
 
 
